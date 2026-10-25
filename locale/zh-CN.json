@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "MaaEnd",
+    "description": "接入 MaaEnd（终末地小助手 / MXU）：运行带静音与关游戏钩子的任务链，查看看板、日志与实时画面。"
+  },
+  "panel": {
+    "title": "MaaEnd",
+    "subtitle": "自动化看板",
+    "refresh": "刷新",
+    "refreshAgo": "{age} 秒前更新"
+  },
+  "status": {
+    "online": "MXU 已连接",
+    "offline": "MXU 未连接",
+    "elevated": "管理员",
+    "notElevated": "非管理员",
+    "idle": "空闲",
+    "running": "运行中",
+    "selectInstance": "实例"
+  },
+  "actions": {
+    "run": "开始任务",
+    "stop": "停止",
+    "mute": "静音",
+    "unmute": "取消静音",
+    "killGame": "关闭游戏",
+    "screenshot": "截图",
+    "launch": "启动 MXU"
+  },
+  "hooks": {
+    "title": "自动钩子",
+    "muteOnStart": "启动后静音",
+    "unmuteOnFinish": "结束后取消静音",
+    "killGameOnFinish": "结束后关闭游戏",
+    "webhookUrl": "Webhook（可选）"
+  },
+  "tasks": {
+    "title": "任务",
+    "enabled": "开",
+    "disabled": "关",
+    "special": "特殊"
+  },
+  "logs": {
+    "title": "最近日志"
+  }
+}

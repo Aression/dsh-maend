@@ -1,0 +1,66 @@
+{
+  "name": "dsh-maend",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "DeepSeek Harness plugin for MaaEnd (MXU): run automation chains with startup-mute and success-gated close-game hooks, and manage everything from a live dashboard panel.",
+  "license": "MIT",
+  "author": "Aression",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "maaend",
+    "mxu",
+    "maaframework",
+    "endfield",
+    "automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aression/dsh-maend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aression/dsh-maend/issues"
+  },
+  "homepage": "https://github.com/Aression/dsh-maend#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/*.js",
+    "scripts/*.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/logo.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js && node --check lib/maend.js && node --check lib/install.js && node --check lib/schema.js",
+    "add-special-tasks": "node scripts/add-special-tasks.mjs",
+    "remove-special-tasks": "node scripts/remove-special-tasks.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# editor / os noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# logs and local experiments
+*.log
+tmp/
+scratch/
+*.local.json

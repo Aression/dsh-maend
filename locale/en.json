@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "MaaEnd",
+    "description": "Control MaaEnd (MXU) automation: run daily task chains with mute / close-game hooks, watch run state and logs, and grab live frames."
+  },
+  "panel": {
+    "title": "MaaEnd",
+    "subtitle": "Automation dashboard",
+    "refresh": "Refresh",
+    "refreshAgo": "updated {age}s ago"
+  },
+  "status": {
+    "online": "MXU online",
+    "offline": "MXU offline",
+    "elevated": "elevated",
+    "notElevated": "not elevated",
+    "idle": "idle",
+    "running": "running",
+    "selectInstance": "Instance"
+  },
+  "actions": {
+    "run": "Run tasks",
+    "stop": "Stop",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "killGame": "Close game",
+    "screenshot": "Screenshot",
+    "launch": "Launch MXU"
+  },
+  "hooks": {
+    "title": "Hooks",
+    "muteOnStart": "Mute on start",
+    "unmuteOnFinish": "Unmute when done",
+    "killGameOnFinish": "Close game when done",
+    "webhookUrl": "Webhook (optional)"
+  },
+  "tasks": {
+    "title": "Tasks",
+    "enabled": "on",
+    "disabled": "off",
+    "special": "special"
+  },
+  "logs": {
+    "title": "Recent logs"
+  }
+}
