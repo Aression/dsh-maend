@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Syntax check
+        run: npm run check --if-present
+      - name: Smoke import (host + lib)
+        shell: pwsh
+        run: |
+          node -e "import('./index.js').then(m => { if (typeof m.apply !== 'function') { console.error('apply missing'); process.exit(1) } console.log('host ok:', m.name, m.inject) })"
+          node -e "import('./lib/install.js').then(m => console.log('install helpers:', Object.keys(m).join(',')))"
+          node -e "import('./lib/maend.js').then(m => { if (typeof m.createClient !== 'function') { console.error('createClient missing'); process.exit(1) } console.log('maend lib ok') })"

@@ -11,6 +11,7 @@
 [![DeepSeek Harness Plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f46e5)](https://github.com/deepseek-ai)
 [![MaaFramework](https://img.shields.io/badge/MaaFramework-v5-1f6feb)](https://github.com/MaaXYZ/MaaFramework)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078d4?logo=windows&logoColor=white)](#环境要求)
+[![CI](https://github.com/Aression/dsh-maend/actions/workflows/ci.yml/badge.svg)](https://github.com/Aression/dsh-maend/actions/workflows/ci.yml)
 [![GitHub stars](https://img.shields.io/github/stars/Aression/dsh-maend?style=flat&color=ffcc00)](https://github.com/Aression/dsh-maend/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/Aression/dsh-maend)](https://github.com/Aression/dsh-maend/commits)
 
