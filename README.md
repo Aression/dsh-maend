@@ -44,6 +44,16 @@ MaaEnd 是《明日方舟：终末地》的自动化助手（MaaFramework + MXU 
 | 🔁 运行判定 | 订阅 MXU WebSocket 的 `Tasker.Task.Succeeded/Failed`，不依赖会残留的 `task_run_state` |
 | 🧰 辅助脚本 | 把静音/取消静音（可选：无条件关游戏）写进 MXU 实例任务列表，MaaEnd 自己的界面里也能看到和排序 |
 
+## 预览
+
+看板右侧的「实时画面」走插件自己的代理接口 `GET /api/dsh-maend/screenshot`，它转发 MXU 的
+`GET /api/maa/instances/:id/screenshot`。下面是这个接口真实返回的一帧（1280×720 PNG，游戏运行中抓取）：
+
+<p align="center"><img src="assets/preview-game.png" alt="MaaEnd 实时画面（/api/dsh-maend/screenshot 抓取）" width="820" /></p>
+
+面板本身是 DSH 侧边栏里的 `MaaEnd` 入口（实例下拉、任务开关、hooks 开关、实时画面、日志），
+因为渲染在已登录的 DSH 页面里，这里不放 UI 截图，改由 `client.js` 的离线渲染冒烟保证结构正确。
+
 ## 工作原理
 
 ```
